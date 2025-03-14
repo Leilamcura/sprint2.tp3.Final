@@ -1,4 +1,4 @@
-// Definición del modelo de datos, estructura y reglas de validación para los documentos almacenados en MondoDB
+// Definición del modelo de datos, estructura y reglas de validación para los documentos almacenados en MongoDB
 import mongoose from 'mongoose'
 
 const superheroSchema = new mongoose.Schema({

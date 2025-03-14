@@ -1,7 +1,7 @@
 // Implementa los metodos definidos en la interfaz
 // interactúa directa# con MongoDB a traves de Mongoose para realizar operaciones de datos
 
-import SuperHero from '..models/SuperHero.mjs';
+import SuperHero from '../models/SuperHero.mjs';
 import IRepository from './IRepository.mjs';
 
 class SuperHeroRepository extends IRepository{
@@ -12,11 +12,11 @@ class SuperHeroRepository extends IRepository{
         return await SuperHero.find({});
     }
     async buscarPorAtributo(atributo, valor) {
-        RESOLVER!!!!!!!!
-    }
+        return await SuperHero.find({ [atributo]: valor });
+      }
     async obtenerMayoresDe30() {
-        RESOLVER!!!!!!!!!
-    }
+        return await SuperHero.find({ edad: { $gt: 30 } }); //$gt: "greater than" (mayor que)
+      }
 }
 
 export default new SuperHeroRepository();
